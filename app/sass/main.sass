@@ -1,0 +1,732 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  color: $text
+
+//html, body
+//  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  outline: none
+
+  &:hover, &:focus
+    text-decoration: none
+    outline: none
+
+input, select, textarea
+  outline: none
+  box-sizing: border-box
+  box-shadow: inset 0 2px 5px rgba(26, 28, 34, 0.1)
+  padding: 0 10px 0 50px
+  border: 1px solid #EAEAEA
+    radius: 2px
+  width: 100%
+  height: 54px
+  background: #FEFEFF
+  font-family: $default-font
+  font-size: 16px
+  color: $grey
+  transition: .3s ease
+  cursor: pointer
+  &::placeholder
+    color: $grey
+    transition: .3s ease
+  &:hover
+    color: $text
+    &::placeholder
+      color: $text
+
+label
+  display: block
+  max-width: 265px
+  width: 100%
+  position: relative
+  margin: 0 0 15px
+
+.input-icon
+  position: absolute
+  top: 50%
+  transform: translate(0,-50%)
+  left: 24px
+
+button
+  outline: none
+  box-sizing: border-box
+  padding: 0
+  border: none
+  margin: 0
+  font-family: $default-font
+  cursor: pointer
+  transition: .3s ease
+
+form
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: space-between
+  button, .btn
+    max-width: 200px
+    margin: 0 0 15px
+    height: 54px
+    font-size: 15px
+
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  border-radius: 2px
+  width: 100%
+  height: 45px
+  font-size: 14px
+  font-weight: 600
+
+.btn-accent
+  color: #fff
+  background: $gradient
+  box-shadow: 0px 3px 16px rgba(2, 119, 189, 0.35)
+  &:hover
+    background: $gradient-hover
+
+.container
+  max-width: 1230px
+  width: 100%
+  margin: 0 auto
+  padding: 0 15px
+  display: flex
+  flex-wrap: wrap
+  position: relative
+  box-sizing: border-box
+
+.align-items-center
+  align-items: center
+
+.align-items-start
+  align-items: start
+
+.align-items-end
+  align-items: end
+
+.justify-content-between
+  justify-content: space-between
+
+.justify-content-center
+  justify-content: center
+
+.justify-content-start
+  justify-content: flex-start
+
+.justify-content-end
+  justify-content: flex-end
+
+h1
+  font-size: 50px
+  font-weight: bold
+  font-family: $font
+  margin: 0 0 60px
+  width: 100%
+
+h2
+  font-family: $font
+  font-size: 48px
+  font-weight: bold
+  width: 100%
+  max-width: 610px
+  margin: 0 0 60px
+
+h3
+  font-size: 24px
+  font-weight: bold
+  font-family: $font
+  width: 100%
+  text-align: center
+  margin: 0 auto 18px
+
+.description-title
+  width: 100%
+  margin: 0 auto 30px
+  font-size: 19px
+  color: $grey
+
+.w-100
+  width: 100%
+
+//header
+header
+  position: fixed
+  left: 0
+  top: 9px
+  width: 100%
+  z-index: 5
+  padding: 21px 0 22px
+  .btn
+    max-width: 163px
+
+header.fixed
+  box-shadow: 0 5px 10px rgba(34, 38, 45, 0.06)
+  background: #fff
+  color: $text
+  top: 0
+  .menu
+    li
+      a
+        color: $text
+  a
+    color: $text
+  .btn
+    color: #fff
+  .btn-burger
+    span
+      background: $text
+
+
+
+.logo
+  display: flex
+  flex-direction: column
+  font-size: 13px
+  font-weight: 600
+  color: #fff
+
+.logo-title
+  text-transform: uppercase
+  font-size: 24px
+  font-weight: 800
+
+.menu
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  li
+    margin: 0 40px 0 0
+    &:last-child
+      margin: 0
+    a
+      color: #fff
+      font-size: 14px
+      &:hover
+        text-decoration-line: underline
+  .btn-close
+    display: none
+
+
+.btn-close
+  position: relative
+  width: 14px
+  height: 14px
+  cursor: pointer
+  &:before, &:after
+    content: ''
+    position: absolute
+    width: 2.5px
+    height: 100%
+    background: #C4C4C4
+    border-radius: 2px
+    top: 0
+    left: 7px
+  &:before
+    transform: rotate(45deg)
+  &:after
+    transform: rotate(135deg)
+
+.box-contacts
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+
+.phone
+  font-size: 18px
+  font-weight: bold
+  color: #fff
+  margin: 0 0 5px
+  line-height: 100%
+
+.mail
+  color: #fff
+  font-size: 15px
+
+.btn-burger
+  display: none
+  align-items: center
+  justify-content: space-between
+  flex-direction: column
+  width: 20px
+  height: 14px
+  margin: 0 0 0 10px
+  span
+    width: 100%
+    height: 2px
+    background: #fff
+    display: block
+
+//main
+main
+  padding: 187px 0 137px
+  position: relative
+  color: #fff
+  background: url("../img/bg1.jpg") no-repeat center
+    size: cover
+
+.main-content
+  width: calc(100% - 496px)
+
+.advantages-wrapper
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  flex-wrap: wrap
+
+.advantages-box
+  font-size: 14px
+  line-height: 140%
+  width: 215px
+  margin: 0 0 40px
+
+.advantages-box__num
+  font-size: 24px
+  color: $accent
+  font-weight: bold
+  font-family: $font
+  margin: 0 0 12px
+  line-height: 100%
+
+.main-img
+  position: relative
+  max-width: 496px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  &:before, &:after
+    content: ''
+    border: 2px solid rgba(255, 255, 255, 0.1)
+      radius: 50%
+    left: 50%
+    top: 46%
+    transform: translate(-50%,-50%)
+    position: absolute
+  &:before
+    width: 482px
+    height: 482px
+  &:after
+    content: ''
+    background: rgba(255, 255, 255, 0.1)
+    width: 390px
+    height: 390px
+  img
+    position: relative
+    z-index: 1
+
+//callback-section
+.callback-section
+  margin: -60px 0 150px
+  position: relative
+  z-index: 1
+
+.callback-wrapper
+  max-width: 996px
+  width: 100%
+  margin: 0 auto
+  box-shadow: 0 10px 20px rgba(26, 28, 34, 0.06)
+  background: #fff
+  border-radius: 12px
+  padding: 35px 96px
+
+.form
+  max-width: 790px
+  width: 100%
+  margin: 0 auto
+
+//modal
+.modal__div
+  position: fixed
+  max-width: 360px
+  width: 100%
+  height: 100%
+  top: 45%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 101
+  overflow: auto
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  display: none
+  opacity: 0
+
+.modal__close
+  position: absolute
+  right: 16px
+  top: 16px
+  width: 14px
+  height: 14px
+  cursor: pointer
+  &:before, &:after
+    content: ''
+    position: absolute
+    width: 2.5px
+    height: 100%
+    background: #C4C4C4
+    border-radius: 2px
+    top: 0
+    left: 7px
+  &:before
+    transform: rotate(45deg)
+  &:after
+    transform: rotate(135deg)
+
+.modal__wrapper
+  background: #fff
+  width: 100%
+  height: auto
+  overflow: auto
+  margin: 50px auto
+  padding: 45px 0 0
+  box-sizing: border-box
+  position: relative
+  box-shadow: 0 10px 20px rgba(26, 28, 34, 0.06)
+  border-radius: 12px
+
+.modal__body
+  padding: 0 40px
+
+.modal__footer
+  padding: 15px 45px
+
+.overlay
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  z-index: 3
+  background: #272B3B
+  opacity: .8
+  display: none
+
+.checkbox
+  width: 100%
+  display: flex
+  flex-direction: row
+  align-items: flex-start
+  justify-content: flex-start
+  font-size: 13px
+  color: $grey
+  margin: 0
+  max-width: none
+  .checkbox-inp
+    display: none
+  .checkbox-custom
+    position: relative
+    width: 18px
+    min-width: 18px
+    height: 18px
+    display: inline-block
+    vertical-align: middle
+    border: 1px solid #EAEAEA
+      radius: 2px
+    background: #ffffff
+    cursor: pointer
+    transition: .3s ease
+    box-shadow: inset 0 2px 5px rgba(26, 28, 34, 0.1)
+    margin: 0 12px 0 0
+  .label
+    display: inline-block
+    vertical-align: middle
+    color: #000000
+  .checkbox-inp:checked + .checkbox-custom
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      width: 8px
+      height: 6px
+      background: url("../img/check.svg") no-repeat center
+        size: contain
+
+//.products
+.products
+  padding: 0 0 140px
+  .btn
+    margin: 30px auto 0
+    max-width: 284px
+    height: 60px
+
+.products-wrapper
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  justify-content: space-between
+
+.products-box
+  background: #fff
+  margin: 0 0 30px
+  width: 380px
+  border-radius: 8px
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  padding: 25px
+  box-shadow: 0 6px 12px rgba(26, 28, 34, 0.06)
+  h4
+    margin: 0 0 15px
+    font-weight: 500
+    font-family: $font
+    line-height: 130%
+    font-size: 16px
+  &:first-child
+    .products-box__img
+      img
+        max-width: 96px
+
+.products-box__img
+  width: 120px
+  height: 120px
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  &:before
+    content: ''
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    border: 1px solid #EAEAEA
+      radius: 50%
+    width: 108px
+    height: 108px
+    background: #F7F7F7
+  img
+    max-height: 100%
+    position: relative
+
+.list-characteristics
+  font-size: 14px
+  font-family: $font
+  li
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 10px 0
+    border-bottom: 1px solid #EAEAEA
+    &:last-child
+      border: none
+  span
+    color: $accent
+
+.products-box__content
+  width: calc(100% - 120px)
+  padding: 0 0 0 25px
+
+//callback-section-two
+.callback-section-two
+  margin: 0 auto
+  background: linear-gradient(93.58deg, #3590FF 0%, #0051B5 100%)
+  border-radius: 2px
+  padding: 60px 0
+  position: relative
+
+.callback-img
+  position: absolute
+  max-width: 734px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  left: -523px
+  top: -70px
+
+//production
+.production
+  padding: 150px 0
+
+.production-wrapper
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  flex-wrap: wrap
+
+.production__gallery
+  width: 585px
+  position: relative
+
+.production__content
+  width: calc(100% - 585px)
+  padding: 0 80px 0 0
+
+.slider-gallery-min, .production__slider
+  width: 100%
+  margin-bottom: 0
+  .slide
+    border: 8px solid #FFFFFF
+      radius: 8px
+    filter: drop-shadow(0px 6px 12px rgba(26, 28, 34, 0.06))
+    margin: 20px 0
+
+.slick-slide
+  outline: none
+
+.slider-gallery-min__item
+  max-width: 250px
+  width: 100%
+  margin: 0 auto
+
+.production__slider
+  .slide
+    margin: 20px
+    height: 585px
+    img
+      height: 100%
+      width: 100%
+      object-fit: cover
+
+.slider-nav
+  position: absolute
+  z-index: 1
+  left: 28px
+  bottom: 28px
+  display: flex
+  align-items: stretch
+
+
+.slick-arrow
+  position: relative
+  top: 0
+  left: 0
+  right: 0
+  transform: none
+  background: rgba(53, 144, 255, 0.5)
+  width: 60px
+  height: 60px
+  border: 1px solid #3590FF
+  display: flex
+  align-items: center
+  justify-content: center
+  &:before
+    content: ''
+    border: none
+    width: 22.43px
+    height: 12.62px
+  &:hover, &:focus
+    background: linear-gradient(93.58deg, #3590FF 0%, #0051B5 100%)
+    opacity: .9
+
+.slick-next
+  &:before
+    background: url("../img/arrow-right.svg") no-repeat center
+      size: contain
+
+.slick-prev
+  &:before
+    background: url("../img/arrow-left.svg") no-repeat center
+      size: contain
+
+.list-checkbox
+  font-size: 22px
+  margin: 0 0 40px
+  li
+    position: relative
+    padding: 0 0 0 55px
+    margin: 0 0 30px
+    &:last-child
+      margin: 0
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 7px
+      box-shadow: 0px 6px 6px rgba(0, 81, 181, 0.35)
+      width: 24px
+      height: 24px
+      border-radius: 2px
+      background: url("../img/checkbox.svg") no-repeat center, linear-gradient(93.58deg, #3590FF 0%, #0051B5 100%)
+        size: 15px, cover
+
+@import "media"
+// Всегда в конце
