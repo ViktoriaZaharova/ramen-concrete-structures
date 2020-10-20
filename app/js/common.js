@@ -64,7 +64,7 @@ $(document).ready(function () {
 });
 //end
 
-$(".form").submit(function () {
+$(".form-callback").submit(function () {
     $.ajax({
         type: "POST",
         url: "mail.php",
@@ -83,7 +83,35 @@ $(".form").submit(function () {
                 top: '50%'
             }, 200);
 
-        $(".form").trigger("reset");
+        $(".form-callback").trigger("reset");
+    });
+    return false;
+});
+
+$(".form-price").submit(function () {
+    $.ajax({
+        type: "POST",
+        url: "mail.php",
+        data: $(this).serialize()
+    }).done(function () {
+        $(this).find("input").val("");
+
+        $('.modal__div').css('display', 'none').animate({
+            opacity: 0,
+            top: '45%'
+        });
+
+        $('#thanks__modal').css('display', 'flex')
+            .animate({
+                opacity: 1,
+                top: '50%'
+            }, 200);
+
+        setTimeout(() => {
+            window.location = '../price.xlsx';
+        }, 1000);
+
+        $(".form-price").trigger("reset");
     });
     return false;
 });
@@ -100,4 +128,35 @@ $('.production__slider').slick({
 $('.slider-gallery-min').slick({
     slidesToShow: 2,
     arrows: false
+});
+
+// maps
+ymaps.ready(function () {
+    var map = new ymaps.Map("map", {
+        center: [55.665584, 37.543704],
+        zoom: 9
+    });
+
+    var place1 = new ymaps.Placemark(
+        [55.665584, 37.543704], {
+            hintContent: 'г. Москва, ул. Архитектора Власова, д.49',
+        }, {
+            iconImageHref: 'img/maps.svg',
+            iconImageSize: [18, 25],
+            iconLayout: 'default#image',
+        }
+    );
+
+    var place2 = new ymaps.Placemark(
+        [55.582477, 38.221878], {
+            hintContent: 'г. Раменское, Северное ш., д.10',
+        }, {
+            iconImageHref: 'img/maps.svg',
+            iconImageSize: [18, 25],
+            iconLayout: 'default#image',
+        }
+    );
+
+    map.geoObjects.add(place1);
+    map.geoObjects.add(place2);
 });

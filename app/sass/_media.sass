@@ -19,7 +19,6 @@
     margin: 0 20px 0 0
 
   .products-box
-    width: 49.5%
     br
       display: none
 
@@ -33,6 +32,19 @@
 
   .production__content
     padding: 0 20px 0 0
+
+  .objects-maps
+    max-width: 400px
+
+  .objects-content
+    width: calc(100% - 400px)
+    padding: 0 20px 0 0
+    h4
+      max-width: none
+      font-size: 18px
+
+  .objects-content__wrapper ul
+    font-size: 16px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 1100px)
@@ -93,6 +105,55 @@
   .list-characteristics
     font-size: 13px
 
+  .objects-box
+    font-size: 16px
+
+  .col-3
+    width: 50%
+
+  .mb-50
+    margin-bottom: 30px
+
+  .objects-content
+    width: 100%
+    padding: 0
+    margin: 0 0 30px
+
+  .objects-maps
+    margin: 0 auto
+
+  .objects-content__wrapper
+    max-width: 700px
+    width: 100%
+
+  .objects
+    h3
+      max-width: none
+      font-size: 20px
+
+  .contacts-content
+    width: 100%
+    padding: 0
+
+  .contacts-maps
+    width: 100%
+    margin: 30px auto 0
+    order: 1
+
+  .address
+    font-size: 16px
+    margin: 0 0 20px
+
+  .contacts
+    padding: 70px 0
+    .phone
+      margin: 0 0 25px
+      font-size: 16px
+    .mail
+      font-size: 16px
+      margin: 0 0 30px
+    .logo
+      margin: 0 0 30px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -158,6 +219,22 @@
   .slider-gallery-min__item
     max-width: none
 
+  .p-150
+    padding: 70px 0
+
+  .col-4
+    width: 33.3%
+
+  .reviews
+    padding: 70px 0 40px
+    .description-title
+      font-size: 18px
+      margin: 0 0 40px
+
+  .mb-60
+    margin-bottom: 30px
+
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 575px)
   .phone
@@ -208,6 +285,29 @@
   .products
     padding: 0 0 70px
 
+  .objects-content__wrapper ul
+    max-width: none
+    margin: 0 0 20px
+    font-size: 14px
+    &:last-child
+      margin: 0
+
+  .objects-wrapper
+    margin: 30px 0 0
+
+  .col-3
+    width: 100%
+
+  .objects-box
+    font-size: 14px
+    padding: 20px
+
+  .p-150
+    padding: 40px 0
+
+  .col-4
+    width: 50%
+
 @media only screen and (max-width : 480px)
   .logo
     width: 100%
@@ -227,8 +327,6 @@
   .callback-wrapper
     padding: 20px 30px
 
-  .products-box
-    width: 100%
 
   .list-checkbox
     font-size: 14px
@@ -239,6 +337,12 @@
   .production
     padding: 40px 0
 
+  .contacts .logo
+    justify-content: flex-start
+    margin: 0 0 30px
+    text-align: left
+
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-	/**/
+@media only screen and (max-width : 420px)
+  .col-4
+    width: 100%
