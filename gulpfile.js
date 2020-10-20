@@ -59,7 +59,7 @@ gulp.task('tiny', function () {
         .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('img', function () {
+gulp.task('img', ['tiny'], function(){
     return gulp.src('app/img/**/*.+(svg|ico)')
         .pipe(cache(imagemin({
             interlaced: true,

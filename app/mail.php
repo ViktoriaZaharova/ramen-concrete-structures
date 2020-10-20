@@ -1,6 +1,6 @@
 <?php
 
-$recepient = "info@steeltube.kz";
+$recepient = "zaharova181114@gmail.com";
 $sitename = "Раменские Бетонные конструкции";
 
 $name = trim($_POST["name"]);
